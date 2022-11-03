@@ -2,8 +2,11 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
+html{
+  scroll-behavior: smooth;
+}
 body{
-overflow-x:hidden;
+  overflow-x: hidden;
 }
 .banner{
   width: 100%;
@@ -13,6 +16,17 @@ overflow-x:hidden;
   background-size: cover;
   background-position: center;
   background-repeat: repeat-y;
+}
+section{
+	min-height: 100vh;
+	width: 100%;
+	display: flex;
+}
+#sec-1{
+	position: relative;
+}
+#sec-2{
+	background-color: #009688;
 }
 .navbar{
   width: 85%;
@@ -61,31 +75,81 @@ overflow-x:hidden;
   margin-top: 1rem;
   width: 50rem;
 }
+.scrolldown{
+	height: 3rem;
+	width: 2rem;
+	border: 0.1rem solid #009688;
+	position: absolute;
+	left: 50%;
+	bottom: 10%;
+	border-radius: 3rem;
+	cursor: pointer;
+}
+.scrolldown::before,
+.scrolldown::after{
+	content: '';
+	position: absolute;
+	top: 20%;
+	left: 50%;
+	border: 0.1rem solid #009688;
+	height: 0.75rem;
+	width: 0.75rem;
+	transform: translate(-50%, -100%) rotate(45deg);
+	border-top: transparent;
+	border-left: transparent;
+	animation: scrolldown 1s ease-in-out infinite;
+}
+.scrolldown::after{
+	top: 30%;
+	animation-delay: 0.3s;
+}
+@keyframes scrolldown{
+	0%{
+	  opacity: 0;
+	}
+	30%{
+	  opacity: 1;
+	}
+	60%{
+	  opacity: 1;
+	}
+	100%{
+	  opacity: 0;
+	  top:90%;
+	}
+}
 </style>
 <title class= "style">Pool gallery</title>
 </head>
 <body>
-  <div class = "banner">
-    <div class = "navbar">
-      <img src="sports-swimming-icon-png-1.png" class="logo">
-      <ul>
-          <li><a href="poolsite.html">Home</a></li>
-          <li><a href="adresscontact.html">Adress and contact</a></li>
-      </ul>    
-    </div>
-    <div class="content">
-      <h1>
-      OUR GALLERY
-      </h1>
-      <p>
-		<div>Here you can explore pools which we have made for our previous customers</div>
-      </p>
-    </div>
-  </div>
-  <div style="text-align: center">
-	<img src="pool1.jpg" class="img">
-	<img src="pool2.jpg" class="img">
-	<img src="pool3.jpg" class="img">
-  </div>
+	<section id="sec-1">
+		<div class = "banner">
+			<div class = "navbar">
+			  <img src="sports-swimming-icon-png-1.png" class="logo">
+			  <ul>
+				  <li><a href="poolsite.html">Home</a></li>
+				  <li><a href="adresscontact.html">Adress and contact</a></li>
+			  </ul>    
+			</div>
+			<div class="content">
+			  <h1>
+			  OUR GALLERY
+			  </h1>
+			  <p>
+				<div>Here you can explore pools which we have made for our previous customers</div>
+			  </p>
+			</div>
+		</div>
+		<a href="#sec-2">
+			<div class = "scrolldown"></div>
+		</a>
+	</section>
+	<section id="sec-2">
+		<div style="text-align: center">
+			<img src="pool1.jpg" class="img">
+			<img src="pool2.jpg" class="img">
+			<img src="pool3.jpg" class="img">
+		</div>
+	</section>
 </body>
 </html>
