@@ -8,22 +8,21 @@ html{
 body{
   overflow-x: hidden;
 }
-.banner{
-  width: 100%;
-  height: 100vh;
-  background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),
-  url("237624-water-pool-swimming-pool-and-reflection-hd.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: repeat-y;
-}
 section{
-	min-height: 100vh;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+}
+.banner{
 	width: 100%;
-	display: flex;
+	height: 100vh;
+	background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),
+	url("237624-water-pool-swimming-pool-and-reflection-hd.jpg");
+	background-size: cover;
+	background-position: center;
 }
 #sec-1{
-	position: relative;
+	position:relative;
 }
 #sec-2{
 	background-color: #009688;
@@ -125,24 +124,24 @@ section{
 	<section id="sec-1">
 		<div class = "banner">
 			<div class = "navbar">
-			  <img src="sports-swimming-icon-png-1.png" class="logo">
-			  <ul>
-				  <li><a href="poolsite.html">Home</a></li>
-				  <li><a href="adresscontact.html">Adress and contact</a></li>
-			  </ul>    
+				<img src="sports-swimming-icon-png-1.png" class="logo">
+				<ul>
+					  <li><a href="poolsite.html">Home</a></li>
+					  <li><a href="adresscontact.html">Adress and contact</a></li>
+				</ul>    
 			</div>
 			<div class="content">
-			  <h1>
-			  OUR GALLERY
-			  </h1>
-			  <p>
-				<div>Here you can explore pools which we have made for our previous customers</div>
-			  </p>
+				<h1>
+				  OUR GALLERY
+				</h1>
+				<p>
+				  <div>Here you can explore pools which we have made for our previous customers</div>
+				</p>
 			</div>
+			<a href="#sec-2">
+				<div class = "scrolldown"></div>
+			</a>
 		</div>
-		<a href="#sec-2">
-			<div class = "scrolldown"></div>
-		</a>
 	</section>
 	<section id="sec-2">
 		<div style="text-align: center">
