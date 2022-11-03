@@ -1,0 +1,91 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body{
+overflow-x:hidden;
+}
+.banner{
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),
+  url("237624-water-pool-swimming-pool-and-reflection-hd.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: repeat-y;
+}
+.navbar{
+  width: 85%;
+  margin: auto;
+  padding: 3rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; 
+}
+.logo{
+  width: 12rem;
+  cursor: pointer;
+}
+.navbar ul li{
+  list-style:none;
+  display: inline-block;
+  margin: 0 1.3rem;
+  position: relative;
+}
+.navbar ul li a{
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+}
+.navbar ul li::after{
+  content:"";
+  height: 0.2rem;
+  width: 0;
+  background: #009688;
+  position: absolute;
+  left: 0;
+  bottom: -0.1rem;
+  transition:0.5s;
+}
+.navbar ul li:hover::after{
+  width:100%;
+}
+.content{
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  text-align: center;
+  color: #fff;
+}
+.img{
+  margin-top: 1rem;
+  width: 50rem;
+}
+</style>
+<title class= "style">Pool gallery</title>
+</head>
+<body>
+  <div class = "banner">
+    <div class = "navbar">
+      <img src="sports-swimming-icon-png-1.png" class="logo">
+      <ul>
+          <li><a href="poolsite.html">Home</a></li>
+          <li><a href="adresscontact.html">Adress and contact</a></li>
+      </ul>    
+    </div>
+    <div class="content">
+      <h1>
+      OUR GALLERY
+      </h1>
+      <p>
+		<div>Here you can explore pools which we have made for our previous customers</div>
+      </p>
+    </div>
+  </div>
+  <div style="text-align: center">
+	<img src="pool1.jpg" class="img">
+	<img src="pool2.jpg" class="img">
+	<img src="pool3.jpg" class="img">
+  </div>
+</body>
+</html>
